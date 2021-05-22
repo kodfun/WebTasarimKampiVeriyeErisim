@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdresDefteriEf.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,86 @@ namespace AdresDefteriEf
 {
     public partial class Form1 : Form
     {
+        AdresDefteriContext _db = new AdresDefteriContext();
+        Kisi _duzenlenenKisi = null;
+
         public Form1()
         {
             InitializeComponent();
+            VerileriListele();
         }
 
+        private void VerileriListele()
+        {
+            dgvKisiler.DataSource = _db.Kisiler.ToList();
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            if (_duzenlenenKisi == null)
+            {
+                Kisi kisi = new Kisi()
+                {
+                    Ad = txtAd.Text,
+                    Soyad = txtSoyad.Text,
+                    Telefon = txtTelefon.Text,
+                    Adres = txtAdres.Text
+                };
+                _db.Kisiler.Add(kisi);
+            }
+            else
+            {
+                _duzenlenenKisi.Ad = txtAd.Text;
+                _duzenlenenKisi.Soyad = txtSoyad.Text;
+                _duzenlenenKisi.Telefon = txtTelefon.Text;
+                _duzenlenenKisi.Adres = txtAdres.Text;
+            }
+            FormuSifirla();
+            _db.SaveChanges();
+            VerileriListele();
+        }
+
+        private void FormuSifirla()
+        {
+            txtAd.Clear();
+            txtSoyad.Clear();
+            txtTelefon.Clear();
+            txtAdres.Clear();
+            btnEkle.Text = "Ekle";
+            btnIptal.Hide();
+            _duzenlenenKisi = null;
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (dgvKisiler.SelectedRows.Count > 0)
+            {
+                DataGridViewRow satir = dgvKisiler.SelectedRows[0];
+                Kisi kisi = (Kisi)satir.DataBoundItem;
+                _db.Kisiler.Remove(kisi);
+                _db.SaveChanges();
+                VerileriListele();
+            }
+        }
+
+        private void btnDuzenle_Click(object sender, EventArgs e)
+        {
+            if (dgvKisiler.SelectedRows.Count > 0)
+            {
+                DataGridViewRow satir = dgvKisiler.SelectedRows[0];
+                _duzenlenenKisi = (Kisi)satir.DataBoundItem;
+                txtAd.Text = _duzenlenenKisi.Ad;
+                txtSoyad.Text = _duzenlenenKisi.Soyad;
+                txtTelefon.Text = _duzenlenenKisi.Telefon;
+                txtAdres.Text = _duzenlenenKisi.Adres;
+                btnEkle.Text = "Kaydet";
+                btnIptal.Show();
+            }
+        }
+
+        private void btnIptal_Click(object sender, EventArgs e)
+        {
+            FormuSifirla();
+        }
     }
 }
