@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlSorgulari", "SqlSorgular
 		SqlSorgulari\02-Sorgular.sql = SqlSorgulari\02-Sorgular.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdresDefteri", "AdresDefteri\AdresDefteri.csproj", "{FD2EE906-1AA2-488E-84D7-D8BD47433367}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A63E390B-9815-4B04-9845-4AA8D8BBA65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A63E390B-9815-4B04-9845-4AA8D8BBA65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A63E390B-9815-4B04-9845-4AA8D8BBA65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD2EE906-1AA2-488E-84D7-D8BD47433367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD2EE906-1AA2-488E-84D7-D8BD47433367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD2EE906-1AA2-488E-84D7-D8BD47433367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD2EE906-1AA2-488E-84D7-D8BD47433367}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
