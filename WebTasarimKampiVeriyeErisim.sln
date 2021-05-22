@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetGiris", "AdoNetGiris\AdoNetGiris.csproj", "{A63E390B-9815-4B04-9845-4AA8D8BBA65A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlSorgulari", "SqlSorgulari", "{C86A36FD-170F-49CB-8D32-1AC17BA8DC73}"
+	ProjectSection(SolutionItems) = preProject
+		SqlSorgulari\01-Sorgular.sql = SqlSorgulari\01-Sorgular.sql
+		SqlSorgulari\02-Sorgular.sql = SqlSorgulari\02-Sorgular.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A63E390B-9815-4B04-9845-4AA8D8BBA65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63E390B-9815-4B04-9845-4AA8D8BBA65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63E390B-9815-4B04-9845-4AA8D8BBA65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63E390B-9815-4B04-9845-4AA8D8BBA65A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {158A35DD-CF36-4310-BE2D-8CEE2D89F488}
+	EndGlobalSection
+EndGlobal
