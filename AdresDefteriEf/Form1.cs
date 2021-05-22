@@ -24,7 +24,22 @@ namespace AdresDefteriEf
 
         private void VerileriListele()
         {
-            dgvKisiler.DataSource = _db.Kisiler.ToList();
+            string ara = txtAra.Text;
+            if (ara == "")
+            {
+                dgvKisiler.DataSource = _db.Kisiler.ToList();
+            }
+            else
+            {
+                dgvKisiler.DataSource =
+                    _db.Kisiler
+                        .Where(k => k.Ad.Contains(ara) 
+                            || k.Soyad.Contains(ara) 
+                            || k.Telefon.Contains(ara) 
+                            || k.Adres.Contains(ara)
+                            || k.Id.ToString() == ara)
+                        .ToList();
+            }
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -93,6 +108,11 @@ namespace AdresDefteriEf
         private void btnIptal_Click(object sender, EventArgs e)
         {
             FormuSifirla();
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            VerileriListele();
         }
     }
 }

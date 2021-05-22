@@ -42,6 +42,8 @@ namespace AdresDefteriEf
             this.btnSil = new System.Windows.Forms.Button();
             this.btnDuzenle = new System.Windows.Forms.Button();
             this.btnIptal = new System.Windows.Forms.Button();
+            this.txtAra = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKisiler)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,12 +130,12 @@ namespace AdresDefteriEf
             this.dgvKisiler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvKisiler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvKisiler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKisiler.Location = new System.Drawing.Point(298, 12);
+            this.dgvKisiler.Location = new System.Drawing.Point(298, 50);
             this.dgvKisiler.MultiSelect = false;
             this.dgvKisiler.Name = "dgvKisiler";
             this.dgvKisiler.RowTemplate.Height = 25;
             this.dgvKisiler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKisiler.Size = new System.Drawing.Size(683, 403);
+            this.dgvKisiler.Size = new System.Drawing.Size(683, 365);
             this.dgvKisiler.TabIndex = 9;
             // 
             // btnSil
@@ -169,11 +171,30 @@ namespace AdresDefteriEf
             this.btnIptal.Visible = false;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
+            // txtAra
+            // 
+            this.txtAra.Location = new System.Drawing.Point(793, 12);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(188, 32);
+            this.txtAra.TabIndex = 14;
+            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(746, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 25);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Ara";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 465);
+            this.Controls.Add(this.txtAra);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnIptal);
             this.Controls.Add(this.btnDuzenle);
             this.Controls.Add(this.btnSil);
@@ -211,6 +232,8 @@ namespace AdresDefteriEf
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnDuzenle;
         private System.Windows.Forms.Button btnIptal;
+        private System.Windows.Forms.TextBox txtAra;
+        private System.Windows.Forms.Label label5;
     }
 }
 
