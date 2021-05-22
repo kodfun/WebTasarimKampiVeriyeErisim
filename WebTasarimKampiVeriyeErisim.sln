@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlSorgulari", "SqlSorgular
 	ProjectSection(SolutionItems) = preProject
 		SqlSorgulari\01-Sorgular.sql = SqlSorgulari\01-Sorgular.sql
 		SqlSorgulari\02-Sorgular.sql = SqlSorgulari\02-Sorgular.sql
+		SqlSorgulari\03-AdresDefteriDb.sql = SqlSorgulari\03-AdresDefteriDb.sql
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdresDefteri", "AdresDefteri\AdresDefteri.csproj", "{FD2EE906-1AA2-488E-84D7-D8BD47433367}"
