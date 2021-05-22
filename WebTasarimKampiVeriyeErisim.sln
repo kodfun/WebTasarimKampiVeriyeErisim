@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetGiris", "AdoNetGiris\AdoNetGiris.csproj", "{A63E390B-9815-4B04-9845-4AA8D8BBA65A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoNetGiris", "AdoNetGiris\AdoNetGiris.csproj", "{A63E390B-9815-4B04-9845-4AA8D8BBA65A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlSorgulari", "SqlSorgulari", "{C86A36FD-170F-49CB-8D32-1AC17BA8DC73}"
 	ProjectSection(SolutionItems) = preProject
@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlSorgulari", "SqlSorgular
 		SqlSorgulari\03-AdresDefteriDb.sql = SqlSorgulari\03-AdresDefteriDb.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdresDefteri", "AdresDefteri\AdresDefteri.csproj", "{FD2EE906-1AA2-488E-84D7-D8BD47433367}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdresDefteri", "AdresDefteri\AdresDefteri.csproj", "{FD2EE906-1AA2-488E-84D7-D8BD47433367}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdresDefteriEf", "AdresDefteriEf\AdresDefteriEf.csproj", "{9DC488AB-5488-4FF6-ABB4-E38D3EEF859B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +30,10 @@ Global
 		{FD2EE906-1AA2-488E-84D7-D8BD47433367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD2EE906-1AA2-488E-84D7-D8BD47433367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD2EE906-1AA2-488E-84D7-D8BD47433367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC488AB-5488-4FF6-ABB4-E38D3EEF859B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC488AB-5488-4FF6-ABB4-E38D3EEF859B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC488AB-5488-4FF6-ABB4-E38D3EEF859B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC488AB-5488-4FF6-ABB4-E38D3EEF859B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
