@@ -48,6 +48,7 @@ namespace AdresDefteri
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdresler)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,9 +125,12 @@ namespace AdresDefteri
             this.btnEkle.TabIndex = 8;
             this.btnEkle.Text = "EKLE";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // dgvAdresler
             // 
+            this.dgvAdresler.AllowUserToAddRows = false;
+            this.dgvAdresler.AllowUserToDeleteRows = false;
             this.dgvAdresler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvAdresler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAdresler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -138,45 +142,63 @@ namespace AdresDefteri
             this.Column5});
             this.dgvAdresler.Location = new System.Drawing.Point(325, 12);
             this.dgvAdresler.Name = "dgvAdresler";
+            this.dgvAdresler.ReadOnly = true;
             this.dgvAdresler.RowTemplate.Height = 25;
-            this.dgvAdresler.Size = new System.Drawing.Size(773, 539);
+            this.dgvAdresler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAdresler.Size = new System.Drawing.Size(773, 494);
             this.dgvAdresler.TabIndex = 9;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 57;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Ad";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 65;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Soyad";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 98;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Telefon";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 109;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Adres";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 94;
+            // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(325, 512);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(87, 40);
+            this.btnSil.TabIndex = 10;
+            this.btnSil.Text = "SİL";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 563);
+            this.ClientSize = new System.Drawing.Size(1110, 571);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.dgvAdresler);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.txtAdres);
@@ -213,6 +235,7 @@ namespace AdresDefteri
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button btnSil;
     }
 }
 

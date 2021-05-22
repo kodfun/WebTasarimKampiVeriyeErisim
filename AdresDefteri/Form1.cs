@@ -35,5 +35,40 @@ namespace AdresDefteri
             }
             dr.Close();
         }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("INSERT INTO Adresler (Ad, Soyad, Telefon, Adres) VALUES(@p1, @p2, @p3, @p4)", con);
+            cmd.Parameters.AddWithValue("@p1", txtAd.Text);
+            cmd.Parameters.AddWithValue("@p2", txtSoyad.Text);
+            cmd.Parameters.AddWithValue("@p3", txtTelefon.Text);
+            cmd.Parameters.AddWithValue("@p4", txtAdres.Text);
+            int etkilenenSatirSayisi = cmd.ExecuteNonQuery();
+
+            FormuSifirla();
+            VerileriListele();
+        }
+
+        private void FormuSifirla()
+        {
+            txtAd.Clear();
+            txtSoyad.Clear();
+            txtTelefon.Clear();
+            txtAdres.Clear();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (dgvAdresler.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow satir in dgvAdresler.SelectedRows)
+                {
+                    var cmd = new SqlCommand("DELETE FROM Adresler WHERE Id = @p1", con);
+                    cmd.Parameters.AddWithValue("@p1", (int)satir.Cells[0].Value);
+                    int sonuc = cmd.ExecuteNonQuery();
+                }
+                VerileriListele();
+            }
+        }
     }
 }
