@@ -14,6 +14,10 @@ namespace AdresDefteri
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+            if (disposing)
+            {
+                con.Dispose(); // uygulama kapatılırken bağlantıyı kapat
+            }
             if (disposing && (components != null))
             {
                 components.Dispose();
@@ -123,6 +127,8 @@ namespace AdresDefteri
             // 
             // dgvAdresler
             // 
+            this.dgvAdresler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAdresler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAdresler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdresler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -140,26 +146,31 @@ namespace AdresDefteri
             // 
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
+            this.Column1.Width = 57;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Ad";
             this.Column2.Name = "Column2";
+            this.Column2.Width = 65;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Soyad";
             this.Column3.Name = "Column3";
+            this.Column3.Width = 98;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Telefon";
             this.Column4.Name = "Column4";
+            this.Column4.Width = 109;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Adres";
             this.Column5.Name = "Column5";
+            this.Column5.Width = 94;
             // 
             // Form1
             // 
